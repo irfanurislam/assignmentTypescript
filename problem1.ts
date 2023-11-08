@@ -1,16 +1,18 @@
 {
     // problem1
 
-    type Add ={
-        name: string;
-        new: string;
-    }
+   const unionType = (data:string | number):number =>{
+        if(typeof data === 'string'){
+            return data.length
+        }else{
+            return data*data
+        }
+   }
+   const testString :string = 'union tpe'
+   const testNumber :number = 4
 
-    const segulo :Add = {
-        name:'irfan',
-        new: 'yae'
-    }
+   console.log(unionType(testString))
+   console.log(unionType(testNumber))
 
-    console.log(segulo)
 
 }
