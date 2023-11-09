@@ -85,4 +85,76 @@ const totalsum2 = calculateSum(anotherArray)
 
 
 
+// problem7
+
+function findFirstOccurrence<T>(array: T[], value: T): number {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === value) {
+        return i;
+      }
+    }
+    return -1;
+  }
+  
+  // Example usage:
+  
+  const numbers: number[] = [1, 2, 3, 4, 5, 2];
+  const strings: string[] = ["apple", "banana", "cherry", "date", "apple"];
+  
+  const focusNumber = 2;
+  const focusString = "cherry";
+  
+  const indexInNumbers = findFirstOccurrence(numbers, focusNumber);
+  const indexInStrings = findFirstOccurrence(strings, focusString);
+  
+  console.log(indexInNumbers); 
+  console.log(indexInStrings); 
+  
+
+// problem8
+
+interface Product{
+    name:string;
+    price:number;
+    quantity:number;
+
+}
+const totalProductCost = (cart:Product[]):number =>{
+      let totalCost = 0;
+
+      for(const product of cart){
+        const itemCost = product.price * product.quantity;
+       totalCost += itemCost
+      
+      }
+    
+      return totalCost
+}
+
+const shoppingCart: Product[] = [
+    { name: "Item 1", price: 10, quantity: 2 },
+    { name: "Item 2", price: 15, quantity: 3 },
+    { name: "Item 3", price: 5, quantity: 4 },
+  ];
+  
+  const totalCost = totalProductCost(shoppingCart);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
